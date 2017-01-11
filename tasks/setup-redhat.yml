@@ -30,9 +30,10 @@
     mode=0700
 
 - name: initialize postgresql if necessary
-  command: >-
-    creates={{ postgresql_data_directory }}/PG_VERSION
-    /usr/bin/postgresql-setup initdb
+  become: true
+  command: "{{postgresql_init_command}} initdb"
+  args:
+    creates: "{{ postgresql_data_directory }}/postgresql.conf"
   notify: restart postgresql
 
 - name: create postgresql backup path

@@ -163,7 +163,7 @@ commit_siblings = {{ postgresql_commit_siblings }}
 
 # - Checkpoints -
 
-checkpoint_segments = {{ postgresql_checkpoint_segments }}
+#checkpoint_segments = {{ postgresql_checkpoint_segments }}
 checkpoint_timeout = {{ postgresql_checkpoint_timeout }}
 checkpoint_completion_target = {{ postgresql_checkpoint_completion_target }}
 checkpoint_warning = {{ postgresql_checkpoint_warning }}
@@ -182,7 +182,7 @@ archive_timeout = {{ postgresql_archive_timeout }}
 
 max_wal_senders = {{ postgresql_max_wal_senders }}
 wal_keep_segments = {{ postgresql_wal_keep_segments }}
-replication_timeout = 60s      # in milliseconds; 0 disables
+#replication_timeout = 60s      # in milliseconds; 0 disables
 
 # - Master Server -
 
